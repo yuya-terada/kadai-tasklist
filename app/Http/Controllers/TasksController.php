@@ -59,7 +59,7 @@ class TasksController extends Controller
         $task = new task;
         $task->status = $request->status;
         $task->content = $request->content;
-        $task->user_id =\Auth::user()->id;
+        $task->user_id = \Auth::user()->id;
         $task->save();
 
         return redirect('/');
